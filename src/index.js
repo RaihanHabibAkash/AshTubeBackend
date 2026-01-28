@@ -11,10 +11,12 @@ app.on("error", (error) => {
   process.exit(1);
 });
 
-connectedDB().then(() => {
-  app.listen(port, () => {
-    console.log(`Example app listening on port: ${port}`);
+connectedDB()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Example app listening on port: ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.log("Error while connectingMongoDB:", error);
   });
-}).catch((error) => {
-  console.log("Error while connectingMongoDB:", error);
-});
