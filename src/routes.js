@@ -1,3 +1,5 @@
 export const registerRoutes = (app) => {
-    app.use();
+    app.get("/", (req, res) => {
+        res.send("Hlow")
+    });
 }
