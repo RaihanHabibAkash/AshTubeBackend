@@ -6,13 +6,6 @@ export const asyncHandler = (reqHandler) => async (req, res, next) => {
     }
 }
 
-
-
-
-
-
-
-
 /* This is a another way to handle ayncReq.
 const asyncHandler = (reqHandler) => {
     return (req, res, next) => {
