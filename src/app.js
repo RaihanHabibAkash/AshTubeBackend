@@ -15,7 +15,7 @@ app.use(cors({
     credentials: true
 }) );
 
-// For req.body.
+// For req.body
 app.use(express.json({ limit: "20kb" }));
 
 /* 
@@ -40,6 +40,7 @@ app.use(
   })
 );
 
+// All routes.
 registerRoutes(app);
 
 export { app };
