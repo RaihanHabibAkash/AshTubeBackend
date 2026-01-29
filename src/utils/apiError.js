@@ -1,6 +1,6 @@
 class ApiError extends Error{
     constructor(
-        statusCode = 420,
+        statusCode,
         message = "Error in ApiError",
         errors = [],
         stack = "",
@@ -19,7 +19,7 @@ class ApiError extends Error{
     }
 }
 
-export { ApiError }
+export { ApiError };
 
 
 /*
