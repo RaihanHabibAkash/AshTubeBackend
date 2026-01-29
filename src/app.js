@@ -1,8 +1,21 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
+import { registerRoutes } from "./routes.js";
 
 const app = express();
 
+/*
+------------credentials: true-----------
+It tells the browser that this backend allows credentials (cookies, authorization headers, sessions)
+to be sent in cross-origin requests. mean port 5000 can send req to port 8000.
+*/
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}) );
+
+// For req.body.
 app.use(express.json({ limit: "20kb" }));
 
 /* 
@@ -26,5 +39,7 @@ app.use(
     limit: "20kb",
   })
 );
+
+registerRoutes(app);
 
 export { app };
