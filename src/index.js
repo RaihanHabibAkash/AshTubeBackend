@@ -19,3 +19,10 @@ connectedDB()
   .catch((error) => {
     console.log("Error while connectingMongoDB:", error);
   });
+
+
+  
+/* Code for creating access and refreash tokens =>
+1. on the cmd or power shell type node and enter.
+2.  require("crypto").randomBytes(64).toString("hex")
+*/
